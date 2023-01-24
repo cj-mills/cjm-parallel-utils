@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nparallel\n\n parallel (func, arr:Collection, max_workers:int=None, leave=False,\n           use_threads=True)\n\nExecute the function in parallel on the elements of the input collection.\nReturns: results (list): A list of the results of the function execution\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nfunc\n\n\nThe function to be executed\n\n\narr\ntyping.Collection\n\nThe input collection\n\n\nmax_workers\nint\nNone\nThe maximum number of workers to use\n\n\nleave\nbool\nFalse\nWhether to leave the progress bar after completion\n\n\nuse_threads\nbool\nTrue\nWhether to use threads or processes as workers\n\n\n\n\ntest_array = list(range(10))\ntest_array\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n\n\ndef test_func(index, array):\n    array[index]*=2\n\n\npartial_func = partial(test_func, array=test_array)\nparallel(partial_func, arr=range(len(test_array)), leave=True)\n\n\n\n\n\ntest_array\n\n[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cjm-parallel-utils",
+    "section": "",
+    "text": "pip install cjm_parallel_utils"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "cjm-parallel-utils",
+    "section": "How to use",
+    "text": "How to use\n\nparallel\n\nfrom cjm_parallel_utils.core import parallel\nfrom functools import partial\n\ntest_array = list(range(10))\nprint(test_array)\n\ndef test_func(index, array):\n    array[index]*=2\n    \npartial_func = partial(test_func, array=test_array)\nparallel(partial_func, arr=range(len(test_array)), leave=True);\n\nprint(test_array)\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n\n\n\n\n[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]"
+  }
+]
