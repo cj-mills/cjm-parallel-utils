@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "cjm-parallel-utils"
+  site-url: "https://cj-mills.github.io/cjm-parallel-utils"
+  description: "Utility functions for parallel operations."
+  repo-branch: main
+  repo-url: "https://github.com/cj-mills/cjm-parallel-utils"
